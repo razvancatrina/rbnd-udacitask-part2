@@ -8,10 +8,6 @@ class TodoItem
     @priority = options[:priority]
   end
 
-  #def format_date
-  #  @due ? @due.strftime("%D") : "No due date"
-  #end
-
   def details
     format_description(@description) + "due: " +
     format_date("todo", due: @due) +
