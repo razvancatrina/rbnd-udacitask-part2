@@ -2,7 +2,7 @@ module Listable
 	@@priorities = ["high", "medium", "low"]
 
   def format_description(description)
-  	"#{description}" + "(#{Listable.get_item_type(self)})".ljust(30) 
+  	("#{description}" + "(#{Listable.get_item_type(self)})").ljust(40) 
   end
 
   def self.get_item_type(item)
