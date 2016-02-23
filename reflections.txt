@@ -1,7 +1,7 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
-	- I added terminal-table and used to display details about the filtered items
+	- I added terminal-table and used it to display details about the filtered items
 2. Describe the 2 features you added to the project.
   a) I added a Reminder class that can be user to add reminders (e.g "Get a haircut!" to be reminded on a specific date)
   b) I added posibility to delete multiple items
