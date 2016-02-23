@@ -1,13 +1,19 @@
 # What you added to Udacitask 2.0
 # -------------------------------------------------------
 1. What is the gem of your choice and how did you use it?
+	- I added terminal-table and used to display details about the filtered items
 2. Describe the 2 features you added to the project.
-  a) Feature 1...
-  b) Feature 2...
+  a) I added a Reminder class that can be user to add reminders (e.g "Get a haircut!" to be reminded on a specific date)
+  b) I added posibility to delete multiple items
 
 # REFLECTIONS
 # -------------------------------------------------------
 1. How long did you spend working on this project?
+	- 5 hours
 2. What was the most rewarding challenge you conquered?
+	- usage of gems, usage of modules and mixins
 3. What two additional features did you build? Why?
+	- I added a Reminder class that can be user to add reminders (e.g "Get a haircut!" to be reminded on a specific date)
+	- I added posibility to delete multiple items so in case some events are canceled the user is able to delete multiple items at a time.
 4. Where do you still have room to grow?
+	- some more advanced OOP

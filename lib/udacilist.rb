@@ -1,6 +1,6 @@
 class UdaciList
   attr_reader :title, :items
-  @@item_types = ["todo", "event", "link"]
+  @@item_types = ["todo", "event", "link", "reminder"]
 
   def initialize(options={})
     @title = options[:title]
@@ -16,14 +16,23 @@ class UdaciList
     @items.push TodoItem.new(description, options) if type == "todo"
     @items.push EventItem.new(description, options) if type == "event"
     @items.push LinkItem.new(description, options) if type == "link"
+    @items.push Reminder.new(description, options) if type == "reminder"
   end
 
   def delete(index)
-    if @items.length-1 <= index
+    if @items.length < index
       raise UdaciListErrors::IndexExceedsListSizeError
     end
 
     @items.delete_at(index - 1)
+  end
+
+  def delete_multiple(indexes_list)
+    counter = 0
+    indexes_list.each { |item_index|
+      delete(item_index - counter)
+      counter = counter + 1
+    }
   end
 
   def all

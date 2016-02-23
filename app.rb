@@ -10,6 +10,7 @@ require_relative "lib/udacilist"
 require_relative "lib/todo"
 require_relative "lib/event"
 require_relative "lib/link"
+require_relative "lib/reminder"
 
 list = UdaciList.new(title: "Julia's Stuff")
 list.add("todo", "Buy more cat food", due: "2016-02-03", priority: "low")
@@ -54,3 +55,11 @@ new_list.filter("event").each_with_index { |val, index|
 puts table
 
 puts new_list.filter("non_existent_item")
+
+reminders = UdaciList.new(title: "Reminders")
+reminders.add("reminder", "Get a haircut!", remind_on: Chronic.parse("in 2 weeks").to_s)
+reminders.add("reminder", "Buy present!", remind_on: Chronic.parse("in 3 weeks").to_s)
+reminders.all
+
+reminders.delete_multiple([1, 2])
+reminders.all
