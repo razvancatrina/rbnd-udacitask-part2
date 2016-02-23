@@ -27,11 +27,11 @@ class UdaciList
   end
 
   def all
-    puts "-" * @title.length
-    puts @title
-    puts "-" * @title.length
+    puts Rainbow("-").green * @title.length
+    puts Rainbow(@title).green 
+    puts Rainbow("-").green * @title.length
     @items.each_with_index do |item, position|
-      puts "#{position + 1}) #{item.details}"
+      puts "#{Rainbow(position + 1).green}) #{Rainbow(item.details).cyan}"
     end
   end
 
