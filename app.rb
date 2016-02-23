@@ -1,3 +1,4 @@
+require 'bundler/setup'
 require 'chronic'
 require 'colorize'
 # Find a third gem of your choice and add it to your project
@@ -51,3 +52,5 @@ new_list.filter("event").each_with_index { |val, index|
 }
 
 puts table
+
+puts new_list.filter("non_existent_item")
