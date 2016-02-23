@@ -36,7 +36,12 @@ class UdaciList
   end
 
   def filter(item_type)
-    @items.select { |item| Listable.get_item_type(item) == item_type}
+    selected_items = @items.select { |item| Listable.get_item_type(item) == item_type}
+    if selected_items.length == 0
+      return "No items of type #{item_type} found"
+    else
+      return selected_items
+    end
   end
 
 end
