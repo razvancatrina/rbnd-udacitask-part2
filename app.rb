@@ -61,5 +61,6 @@ reminders.add("reminder", "Get a haircut!", remind_on: Chronic.parse("in 2 weeks
 reminders.add("reminder", "Buy present!", remind_on: Chronic.parse("in 3 weeks").to_s)
 reminders.all
 
-reminders.delete_multiple([1, 2])
+reminders.delete_multiple([2, 1])
+##reminders.delete_multiple([4,5,6,1]) - test case for multiple deletion
 reminders.all

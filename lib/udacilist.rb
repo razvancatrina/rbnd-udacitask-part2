@@ -29,7 +29,7 @@ class UdaciList
 
   def delete_multiple(indexes_list)
     counter = 0
-    indexes_list.each { |item_index|
+    indexes_list.sort!.each { |item_index|
       delete(item_index - counter)
       counter = counter + 1
     }
